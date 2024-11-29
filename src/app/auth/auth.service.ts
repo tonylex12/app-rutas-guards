@@ -7,9 +7,7 @@ export class AuthService {
   constructor() {}
 
   login(usuario: string, password: string) {
-    if (usuario === 'admin' && password === 'admin') {
-      sessionStorage.setItem('login', 'true');
-    }
+    sessionStorage.setItem('login', 'true');
   }
 
   logout() {

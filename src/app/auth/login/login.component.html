@@ -1,1 +1,24 @@
-<p>login works!</p>
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>AUTENTICACIÓN</mat-card-title>
+  </mat-card-header>
+  <br />
+  <mat-card-content>
+    <div>
+      <mat-form-field>
+        <mat-label>Ingrese su usuario</mat-label>
+        <input matInput type="text" #txtusuario />
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Ingrese su password</mat-label>
+        <input matInput type="password" #txtpassword />
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="login(txtusuario, txtpassword)">
+      Ingresar
+    </button>
+  </mat-card-actions>
+</mat-card>
