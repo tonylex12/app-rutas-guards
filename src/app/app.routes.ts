@@ -8,6 +8,7 @@ import { AlumnodetalleComponent } from './dashboard/alumno/alumnodetalle/alumnod
 import { CursodetalleComponent } from './dashboard/curso/cursodetalle/cursodetalle.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EjemploAngularMaterialComponent } from './ejemplo-angular-material/ejemplo-angular-material.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
   { path: 'angular-material', component: EjemploAngularMaterialComponent },
@@ -15,6 +16,7 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [authGuard],
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'curso', component: CursolistaComponent },
