@@ -1,1 +1,14 @@
-<p>cursolista works!</p>
+<p>Lista de cursos</p>
+
+@for (curso of cursos; track curso.nombre) {
+<div class="curso-container">
+  <p>{{ curso.nombre }}</p>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="goDetalleCurso(curso.nombre.toLowerCase())"
+  >
+    Ver detalle
+  </button>
+</div>
+}
